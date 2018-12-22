@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <RelativeLayout
+        android:id="@+id/userDetailsLayout"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profilePic"
+            android:layout_alignParentLeft="true"
+            app:civ_border_width="0dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+        <TextView
+            android:id="@+id/userName"
+            android:layout_toRightOf="@+id/profilePic"
+            android:layout_width="wrap_content"
+            android:text="Bikash"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:gravity="center_vertical"
+            android:layout_height="35dp" />
+
+        <TextView
+            android:id="@+id/rewardPoint"
+            android:layout_alignParentRight="true"
+            android:text="0"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:textColor="@color/red"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp" />
+        <TextView
+            android:id="@+id/rewardHeading"
+            android:layout_toLeftOf="@+id/rewardPoint"
+            android:text="Rewards"
+            android:textSize="17sp"
+            android:gravity="center_vertical"
+            android:textColor="@color/gray"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp" />
+
+        <TextView
+            android:id="@+id/screenName"
+            android:layout_toRightOf="@+id/profilePic"
+            android:layout_below="@+id/userName"
+            android:layout_width="wrap_content"
+            android:text="Bikash"
+            android:textSize="14sp"
+            android:gravity="center_vertical"
+            android:layout_height="35dp" />
+        <TextView
+            android:id="@+id/location"
+            android:text="Hyderabad"
+            android:textSize="13sp"
+            android:layout_below="@+id/userName"
+            android:gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp" />
+        <ImageView
+            android:id="@+id/locationImage"
+            android:layout_below="@+id/userName"
+            android:layout_toLeftOf="@+id/location"
+            android:gravity="center_vertical"
+            android:src="@drawable/location"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_width="20dp"
+            android:layout_height="35dp" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/followerCounterLayout"
+            android:layout_below="@+id/screenName"
+            android:layout_toRightOf="@+id/profilePic"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:weightSum="1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp">
+            <LinearLayout
+                android:layout_weight="0.5"
+                android:weightSum="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/numberOfFollower"
+                    android:layout_weight="0.3"
+                    android:layout_width="0dp"
+                    android:text="000"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/followerLabel"
+                    android:layout_weight="0.8"
+                    android:layout_width="0dp"
+                    android:text="Follower"
+                    android:textSize="16sp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="0.5"
+                android:weightSum="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/numberOfFollowing"
+                    android:layout_weight="0.3"
+                    android:layout_width="0dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/followingLabel"
+                    android:layout_weight="0.7"
+                    android:layout_width="0dp"
+                    android:text="Following"
+                    android:textSize="16sp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+<View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:id="@+id/view"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_below="@+id/followerCounterLayout"
+    android:background="@color/gray"/>
+        <TextView
+            android:layout_below="@+id/view"
+            android:id="@+id/noTweet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="No Tweets"/>
+
+        <ListView
+            android:layout_below="@+id/view"
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:divider="#e1e8ed"
+            android:dividerHeight="1dp"
+            android:drawSelectorOnTop="false"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_alignParentLeft="true"
+            android:id="@+id/tweetText"
+            android:background="@drawable/corner_background"
+            android:layout_toLeftOf="@+id/tweet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:visibility="visible"
+            />
+        <Button
+            android:background="@drawable/corner_background"
+            android:backgroundTint="@color/blue"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/tweet"
+            android:text="tweet"
+            android:onClick="updateStatus"
+            android:layout_marginLeft="10dp"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

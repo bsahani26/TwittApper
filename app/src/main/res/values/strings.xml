@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TwittApper</string>
+    <string name="key">************</string>/// TODO your key should be here
+    <string name="secret_key">************</string> //// TODO your secret_key should be here
+</resources>
